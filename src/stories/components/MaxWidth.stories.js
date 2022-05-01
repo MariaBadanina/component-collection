@@ -5,7 +5,7 @@ export const Base = () => {
   return (
     <div
       style={{
-        background: "var(--textAccent)",
+        background: "var(--ui03)",
         height: "50vh",
         display: "flex",
         alignItems: "center",
