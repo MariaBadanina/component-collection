@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+}
+.valueContainer {
+  background: var(--ui03);
+  display: flex;
+  cursor: pointer;
+  padding: var(--spc-xs);
+}
+.defaultValue {
+  margin-right: var(--spc-xxs);
+}
+
+.dropDownList {
+  background: var(--ui02);
+  overflow: hidden;
+}
+.listItem {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: 0.3s ease;
+  color: var(--textRegular);
+  padding: var(--spc-xs);
+  &:hover {
+    color: var(--ui03);
+    background-color: var(--bgPrimaryButton01);
+  }
+}
