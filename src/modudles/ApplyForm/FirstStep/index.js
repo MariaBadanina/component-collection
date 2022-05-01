@@ -9,21 +9,21 @@ import styles from "./styles.module.scss";
 
 const educationLevel = {
   ES_AD: [
-    { label: "Estudios Finalizados", code: 0 },
-    { label: "Educación Primaria", code: 1 },
-    { label: "Educación Secundaria", code: 2 },
-    { label: "Bachillerato", code: 3 },
-    { label: "Formación Profesional Superior", code: 4 },
-    { label: "Grado o Licenciatura", code: 5 },
-    { label: "Otro", code: 6 },
+    { label: "Completed Studies", code: 0 },
+    { label: "Primary education", code: 1 },
+    { label: "Secondary Education", code: 2 },
+    { label: "Baccalaureate", code: 3 },
+    { label: "Superior professional formation", code: 4 },
+    { label: "Degree or Bachelor's degree", code: 5 },
+    { label: "Other", code: 6 },
   ],
   INT: [
-    { label: "Estudios Finalizados", code: 0 },
-    { label: "Educación Primaria", code: 2 },
-    { label: "Bachillerato o Educación Secundaria", code: 3 },
-    { label: "Formación Técnica o Tecnológica", code: 4 },
-    { label: "Carrera, Pregrado o Licenciatura", code: 5 },
-    { label: "Otro", code: 6 },
+    { label: "Completed Studies", code: 0 },
+    { label: "Primary education", code: 2 },
+    { label: "Baccalaureate o Secondary Education", code: 3 },
+    { label: "Technical or Technological Training", code: 4 },
+    { label: "Undergraduate or Bachelor's Degree", code: 5 },
+    { label: "Other", code: 6 },
   ],
 };
 
@@ -68,13 +68,13 @@ export default (props) => {
   return (
     <div>
       <InputComponent
-        labelText="Nombre y Apellidos *"
+        labelText="Name *"
         name="lead_name"
         type="text"
         register={register}
         error={error}
         required={{
-          required: "Este campo es obligatorio",
+          required: "This field is required",
           minlength: 1,
           maxlength: 128,
           pattern: {
@@ -90,7 +90,7 @@ export default (props) => {
         register={register}
         error={error}
         required={{
-          required: "Este campo es obligatorio",
+          required: "This field is required",
           pattern: {
             value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$/,
             message: "Introduce un email válido",
@@ -109,8 +109,8 @@ export default (props) => {
           error={error}
           name="lead_countryISO"
           required={true}
-          defaultOptionLabel="País *"
-          errorMessage="Elige un país"
+          defaultOptionLabel="Country *"
+          errorMessage="Select Country"
           options={countriesList}
           setValue={setCountryValue}
           value={countryValue}
@@ -123,7 +123,7 @@ export default (props) => {
             error={error}
             name="lead_provinceISO"
             required={true}
-            defaultOptionLabel="Provincia *"
+            defaultOptionLabel="Province *"
             options={regionsOptions}
             setValue={setRegionValue}
             value={regionValue}
@@ -132,23 +132,23 @@ export default (props) => {
           />
         ) : (
           <InputComponent
-            labelText="Provincia *"
+            labelText="Province *"
             name="lead_province"
             type="text"
             register={register}
             error={error}
             required={{
-              required: "Este campo es obligatorio",
+              required: "This field is required",
               pattern: {
                 value: /^([a-zA-ZÀ-ÿẞ])+(([ ]([a-zA-ZÀ-ÿẞ])+)+)?$/,
-                message: "Introduce un valor válido",
+                message: "Please enter a valid value",
               },
             }}
           />
         )}
       </div>
       <PhoneInputComponent
-        labelText="Número *"
+        labelText="Phone number *"
         name="phone"
         register={register}
         error={error}
@@ -163,7 +163,7 @@ export default (props) => {
         }}
       >
         <InputComponent
-          labelText="Edad *"
+          labelText="Age *"
           name="lead_age"
           type="text"
           register={register}
@@ -175,12 +175,12 @@ export default (props) => {
           error={error}
           required={true}
           name="study_level"
-          defaultOptionLabel="Nivel de estudios *"
+          defaultOptionLabel="Educational level *"
           value={educationValue}
           options={educationLevelOptions}
           setValue={setEducationValue}
           label="code"
-          errorMessage="Elige un nuvel de estudios"
+          errorMessage="Select educational level"
         />
       </div>
     </div>

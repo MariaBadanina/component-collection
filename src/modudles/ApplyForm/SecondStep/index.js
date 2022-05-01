@@ -22,8 +22,8 @@ export default ({ register, error }) => {
           error={error}
           name="lead_nationalityISO"
           required={true}
-          defaultOptionLabel="Nacionalidad *"
-          errorMessage="Este campo es obligatorio"
+          defaultOptionLabel="Nationality *"
+          errorMessage="This field is required"
           options={countriesList}
           value={countryValue}
           setValue={setCountryValue}
@@ -31,61 +31,61 @@ export default ({ register, error }) => {
           label="ISO"
         />
         <InputComponent
-          labelText="NIF/Pasaporte *"
+          labelText="Passport *"
           name="lead_documentNumber"
           type="text"
           register={register}
           error={error}
           required={{ required: true, minlength: 1 }}
-          errorMessage="Este campo es obligatorio"
+          errorMessage="This field is required"
           customStyles={styles.halfWidth}
         />
       </div>
       <InputComponent
-        labelText="Últimos estudios finalizados *"
+        labelText="Latest completed studies *"
         name="study_otherStudies"
         type="text"
         register={register}
         error={error}
         required={{ required: true, minlength: 1 }}
-        errorMessage="Este campo es obligatorio"
+        errorMessage="This field is required"
         helperText="ej. Grado en Diseño"
       />
       <InputComponent
-        labelText="Año de finalización *"
+        labelText="Year of completion *"
         name="study_endYearOfAcademicStudies"
         type="text"
         register={register}
         error={error}
         required={{ required: true, minlength: 4 }}
-        errorMessage="Este campo es obligatorio"
+        errorMessage="This field is required"
       />
       <InputComponent
-        labelText="Centro / Universidad *"
+        labelText="Center/ University *"
         name="study_center"
         type="text"
         register={register}
         error={error}
         required={{ required: true, minlength: 1 }}
-        errorMessage="Este campo es obligatorio"
+        errorMessage="This field is required"
       />
       <InputComponent
-        labelText="Motivación para escoger el programa *"
+        labelText="Motivation for choosing the program *"
         name="contact_comment"
         type="textarea"
         register={register}
         error={error}
         required={{ required: true, minlength: 1 }}
-        errorMessage="Este campo es obligatorio"
+        errorMessage="This field is required"
       />
       <RadioButtonGroup
         register={register}
         error={error}
-        label="¿Cuál es tu nivel de inglés?"
+        label="What is your level of English? *"
         elements={[
-          { label: "Bajo", value: "bajo" },
-          { label: "Medio", value: "medio" },
-          { label: "Alto", value: "alto" },
+          { label: "Low", value: "low" },
+          { label: "Medium", value: "medium" },
+          { label: "High", value: "high" },
         ]}
       />
     </div>

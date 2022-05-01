@@ -20,7 +20,7 @@
   border-radius: 4px;
 }
 .input {
-  padding: 18px var(--spc-xxs) var(--spc-xxxs) 30px;
+  padding: 18px var(--spc-xxs) var(--spc-xxxs) 15px;
   height: 48px;
   outline: transparent;
   border: none;
@@ -32,7 +32,7 @@
 }
 .label {
   position: absolute;
-  left: 30px;
+  left: 15px;
   top: 50%;
   transform: translate(0, -50%);
   color: var(--textLight);
