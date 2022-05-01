@@ -1,40 +1,119 @@
-import React from "react";
+import * as React from "react";
+import Button from "../../components/Button/index";
 
-import { Button } from "../../components/Button/Button.js";
+const buttonContainer = {
+  background: "var(--ui01)",
+  padding: "var(--spc-m) var(--spc-xxl)",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  textAlign: "center",
+  justifyContent: "center",
+};
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
+const ButtonsContent = ({}) => {
+  return (
+    <>
+      <div
+        style={{
+          margin: "var(--spc-xs)",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <div style={{ margin: "var(--spc-xxs)", color: "var(--textRegular)" }}>
+          Primary 01
+        </div>
+        <Button
+          appearance="primary01"
+          buttonText="Primary 01"
+          marginBottom="var(--spc-xxxs)"
+        />
+        <Button
+          appearance="primary01"
+          buttonText="Primary 01 disabled"
+          disabled
+        />
+      </div>
+      <div
+        style={{
+          margin: "var(--spc-xs)",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <div style={{ margin: "var(--spc-xxs)", color: "var(--textRegular)" }}>
+          Primary 02
+        </div>
+        <Button
+          appearance="primary02"
+          buttonText="Primary 02"
+          marginBottom="var(--spc-xxxs)"
+        />
+        <Button
+          appearance="primary02"
+          buttonText="Primary 02 disabled"
+          disabled
+        />
+      </div>
+      <div
+        style={{
+          margin: "var(--spc-xs)",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <div style={{ margin: "var(--spc-xxs)", color: "var(--textRegular)" }}>
+          Secondary
+        </div>
+        <Button
+          appearance="secondary"
+          buttonText="Secondary"
+          marginBottom="var(--spc-xxxs)"
+        />
+        <Button
+          appearance="secondary"
+          buttonText="Secondary disabled"
+          disabled
+        />
+      </div>
+      <div
+        style={{
+          margin: "var(--spc-xs)",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <div style={{ margin: "var(--spc-xxs)", color: "var(--textRegular)" }}>
+          Link
+        </div>
+        <Button
+          appearance="link"
+          buttonText="Link"
+          marginBottom="var(--spc-xs)"
+        />
+        <Button appearance="link" buttonText="Link disabled" disabled />
+      </div>
+    </>
+  );
+};
+
+export const Base = () => (
+  <div className={buttonContainer}>
+    <ButtonsContent />
+  </div>
+);
+
 export default {
-  title: "Example/Button",
-  component: Button,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    backgroundColor: { control: "color" },
+  title: "DesignSystem/Buttons",
+  parameters: {
+    layout: "fullscreen",
+    options: {
+      showPanel: false,
+    },
   },
-};
-
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template = (args) => <Button {...args} />;
-
-export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-  primary: true,
-  label: "Button",
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: "Button",
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: "large",
-  label: "Button",
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: "small",
-  label: "Button",
 };

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { AnimatePresence, motion } from "framer-motion";
-import { Button } from "../../components/Button/Button";
+import Button from "../../components/Button/index";
 import PhoneInputComponent from "../../components/PhoneInputComponent";
 
 export const Base = () => {
@@ -13,7 +13,7 @@ export const Base = () => {
   } = useForm({
     mode: "onChange",
   });
-  const [sent, setSent] = useState(false);
+  const [sent, setSent] = useState(true);
   const onSubmit = (data) => {
     alert(JSON.stringify(data));
     setSent(true);
@@ -61,7 +61,8 @@ export const Base = () => {
                   La información se ha enviado correctamente
                 </div>
                 <Button
-                  label="Reset form"
+                  appearance="secondary"
+                  buttonText="Reset form"
                   onClick={() => {
                     reset();
                     setSent(false);
@@ -71,7 +72,7 @@ export const Base = () => {
             </motion.div>
           </AnimatePresence>
         ) : (
-          <form onSubmit={handleSubmit(onSubmit)} data-theme="light">
+          <form onSubmit={handleSubmit(onSubmit)}>
             <PhoneInputComponent
               labelText="Phone number *"
               name="phone"
@@ -86,7 +87,12 @@ export const Base = () => {
                 alignItems: "flex-end",
               }}
             >
-              <Button type="submit" label="Submit" />
+              <Button
+                appearance="secondary"
+                type="submit"
+                button={true}
+                buttonText="Submit"
+              />
             </div>
           </form>
         )}
