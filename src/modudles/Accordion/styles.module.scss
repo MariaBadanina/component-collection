@@ -1,0 +1,39 @@
+@import "../../../.storybook/globalStyles/media-queries.scss";
+
+.container {
+  background-color: var(--ui03);
+}
+.maxWidth {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  width: 100%;
+  padding: var(--spc-xl) 0;
+  @media (min-width: $large-viewport) {
+    padding: var(--spc-4xl) 0;
+    flex-direction: row-reverse;
+  }
+}
+.accordionBox {
+  width: 100%;
+  @media (min-width: $large-viewport) {
+    width: 60%;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $large-viewport) {
+    width: 35%;
+  }
+}
+.detail,
+.title {
+  margin-bottom: var(--spc-xxs);
+  color: var(--textRegular);
+}
+.subtitle {
+  color: var(--textAccent);
+  margin-bottom: var(--spc-xxxs);
+}

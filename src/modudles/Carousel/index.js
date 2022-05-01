@@ -106,7 +106,7 @@ export default ({ elements, data, line }) => {
                 currentSlide > -1 && setCurrentSlide(currentSlide - 1)
               }
             >
-              <img src={arrow} className="arrowLeft" alt="arrow-left" />
+              <img src={arrow} alt="arrow-left" />
             </div>
             <div
               className={`${styles.controlButton} ${styles.buttonRight}`}
@@ -114,7 +114,7 @@ export default ({ elements, data, line }) => {
                 currentSlide < count && setCurrentSlide(currentSlide + 1)
               }
             >
-              <img src={arrow} className="arrowRight" alt="arrow-right" />
+              <img src={arrow} alt="arrow-right" />
             </div>
           </>
         )}

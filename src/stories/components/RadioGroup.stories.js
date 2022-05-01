@@ -51,8 +51,7 @@ export const Base = () => {
             <RadioButtonGroup
               register={register}
               error={errors}
-              label="How would you describe your English level?
- *"
+              label="How would you describe your English level? *"
               elements={[
                 { label: "Low", value: "low" },
                 { label: "Medium", value: "medium" },
