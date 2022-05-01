@@ -1,0 +1,86 @@
+@import "./webfonts.scss";
+
+:root {
+  // Fonts
+  --font-primary: Graphik;
+  --font-secondary: Cooper;
+
+  // Background Colors
+  --ui01: #ffffff;
+  --ui02: #f8f8f8;
+  --ui03: #ebedf0;
+  --ui04: #f9eed6;
+  --ui05: #f7ab1b;
+  --ui06: #001c47;
+
+  // Text Colors
+  --textRegular: #001c47;
+  --textAccent: #f7ab1b;
+  --textUltraAccent: #e0960b;
+  --textLight: #ccd1da;
+  --textInverse: #ffffff;
+
+  --link01: #e0960b;
+  --linkHover01: #e0960b;
+  --linkActive01: #e0960b;
+  --linkVisited01: #e0960b;
+
+  // error
+  --errorMessage: #ff3a21;
+
+  // Area Background Colors
+  --area-bg01: #afd9c0;
+  --area-bg02: #9dc0c9;
+  --area-bg03: #404670;
+  --area-bg04: #f9eed6;
+
+  // Gradient Colors
+  --gradient01: linear-gradient(180deg, #abd9e3 0%, #9ccdd4 100%);
+  --gradient-bg: linear-gradient(
+    180deg,
+    rgba(0, 28, 71, 0.3) 0%,
+    #001c47 81.77%
+  );
+
+  // Veil Colors
+  --modal-bg: rgba(0, 22, 55, 0.85);
+  --header-veil: rgba(0, 28, 71, 0.6);
+  --video-veil: rgba(0, 28, 71, 0.3);
+
+  // Border Radius
+  --radii-xs: 3px;
+  --radii-s: 8px;
+  --radii-m: 16px;
+  --radii-l: 32px;
+  --radii-xl: 60px;
+  --radii-xxl: 100px;
+  --radii-circle: 999px;
+
+  // Spacing
+  --spc-xxxs: 8px;
+  --spc-xxs: 16px;
+  --spc-xs: 24px;
+  --spc-s: 32px;
+  --spc-m: 40px;
+  --spc-l: 48px;
+  --spc-xl: 56px;
+  --spc-xxl: 64px;
+  --spc-xxxl: 72px;
+  --spc-4xl: 96px;
+  --spc-5xl: 128px;
+  --spc-6xl: 256px;
+
+  // Out of Scale Spacing
+  --outSpc-20: 20px;
+  --outSpc-80: 80px;
+  --outSpc-144: 144px;
+
+  // Borders
+  --border-style01: solid;
+
+  // Widths and Containers
+  --width-line01: 1px;
+  --small-container: 600px;
+  --medium-container: 900px;
+  --big-container: 1100px;
+}

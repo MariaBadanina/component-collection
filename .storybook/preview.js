@@ -1,9 +1,9 @@
+import "./globalStyles/normalize.scss";
+import "./globalStyles/global-styles.scss";
+
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
+  options: {
+    showPanel: false,
   },
-}
+  actions: { disable: true },
+};

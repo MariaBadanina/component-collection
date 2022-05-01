@@ -1,0 +1,658 @@
+@import "./media-queries.scss";
+@import "./root.scss";
+
+.display-01,
+.heading-xxl,
+.heading-xl,
+.heading-l,
+.heading-m,
+.heading-s,
+.heading-xs,
+.quote {
+  font-family: var(--font-secondary);
+  font-weight: 400;
+}
+
+.body-lead-xl,
+.body-lead,
+.body-default,
+.body-default-bold,
+.body-inline,
+.caption,
+.common-button,
+.m-caption-button,
+.s-caption-button,
+.xs-caption-button,
+.errorMessage,
+.label {
+  font-family: var(--font-primary);
+  font-weight: 400;
+}
+
+/*---display default---*/
+.display-01 {
+  font-size: 62px;
+  line-height: 98px;
+}
+
+/*---heading default---*/
+.heading-xxl {
+  font-size: 38px;
+  line-height: 48px;
+}
+.heading-xl {
+  font-size: 32px;
+  line-height: 38px;
+}
+.heading-l {
+  font-size: 26px;
+  line-height: 32px;
+}
+.heading-m {
+  font-size: 22px;
+  line-height: 28px;
+}
+.heading-s {
+  font-size: 18px;
+  line-height: 28px;
+}
+.heading-xs {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+/*---body default---*/
+.body-lead-xl {
+  font-size: 16px;
+  line-height: 28px;
+}
+.body-lead {
+  font-size: 14px;
+  line-height: 24px;
+}
+.body-default {
+  font-size: 12px;
+  line-height: 24px;
+}
+.body-default-bold {
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: bold;
+}
+.body-inline {
+  font-size: 11px;
+  line-height: 19px;
+}
+.caption {
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.tabs {
+  font-family: var(--font-tabs);
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/*---components default---*/
+.common-button {
+  font-size: 14px;
+  line-height: 16px;
+}
+.m-caption-button {
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.s-caption-button {
+  font-size: 12px;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.xs-caption-button {
+  font-size: 10px;
+  line-height: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.errorMessage {
+  font-size: 10px;
+  line-height: 18px;
+  letter-spacing: 1px;
+}
+.quote {
+  font-size: 24px;
+  line-height: 32px;
+  font-style: italic;
+  font-weight: 300;
+}
+.quote-body {
+  font-size: 13px;
+  line-height: 18px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/*---paragraphs default---*/
+.body-lead-xl {
+  p {
+    margin-bottom: var(--spc-xxs);
+  }
+}
+.body-lead {
+  p {
+    margin-bottom: var(--spc-xxs);
+  }
+}
+.body-default {
+  p {
+    margin-bottom: var(--spc-xxs);
+  }
+}
+.body-default-bold {
+  p {
+    margin-bottom: var(--spc-xxs);
+  }
+}
+.body-inline {
+  p {
+    margin-bottom: var(--spc-xxxs);
+  }
+}
+
+@media (min-width: $small-viewport) {
+  /*---display s---*/
+  .display-01 {
+    font-size: 72px;
+    line-height: 84px;
+  }
+
+  /*---heaging s---*/
+  .heading-xxl {
+    font-size: 48px;
+    line-height: 62px;
+  }
+  .heading-xl {
+    font-size: 40px;
+    line-height: 52px;
+  }
+  .heading-l {
+    font-size: 32px;
+    line-height: 44px;
+  }
+  .heading-m {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .heading-s {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .heading-xs {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  /*---body s---*/
+  .body-lead-xl {
+    font-size: 18px;
+    line-height: 34px;
+  }
+  .body-lead {
+    font-size: 16px;
+    line-height: 32px;
+  }
+  .body-default {
+    font-size: 14px;
+    line-height: 28px;
+  }
+  .body-default-bold {
+    font-size: 14px;
+    line-height: 28px;
+  }
+  .body-inline {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .caption {
+    font-size: 10px;
+    line-height: normal;
+  }
+  .tabs {
+    font-size: 10px;
+    line-height: normal;
+  }
+  /*---components s---*/
+  .common-button {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .m-caption-button {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .s-caption-button {
+    font-size: 12px;
+    line-height: normal;
+  }
+  .xs-caption-button {
+    font-size: 10px;
+    line-height: 18px;
+  }
+  .errorMessage {
+    font-size: 10px;
+    line-height: 18px;
+  }
+  .quote {
+    font-size: 26px;
+    line-height: 34px;
+    font-weight: 400;
+  }
+  .quote-body {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+  /*---paragraphs s---*/
+  .body-lead-xl {
+    p {
+      margin-bottom: var(--spc-xs);
+    }
+  }
+  .body-lead {
+    p {
+      margin-bottom: var(--spc-xxs);
+    }
+  }
+  .body-default {
+    p {
+      margin-bottom: var(--spc-xxs);
+    }
+  }
+  .body-default-bold {
+    p {
+      margin-bottom: var(--spc-xxs);
+    }
+  }
+  .body-inline {
+    p {
+      margin-bottom: var(--spc-xxxs);
+    }
+  }
+}
+@media (min-width: $medium-viewport) {
+  /*---display m---*/
+  .display-01 {
+    font-size: 72px;
+    line-height: 84px;
+  }
+
+  /*---heading m---*/
+  .heading-xxl {
+    font-size: 48px;
+    line-height: 62px;
+  }
+  .heading-xl {
+    font-size: 40px;
+    line-height: 52px;
+  }
+  .heading-l {
+    font-size: 34px;
+    line-height: 44px;
+  }
+  .heading-m {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .heading-s {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .heading-xs {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  /*---body m---*/
+  .body-lead-xl {
+    font-size: 18px;
+    line-height: 34px;
+  }
+  .body-lead {
+    font-size: 16px;
+    line-height: 32px;
+  }
+  .body-default {
+    font-size: 14px;
+    line-height: 28px;
+  }
+  .body-default-bold {
+    font-size: 14px;
+    line-height: 28px;
+  }
+  .body-inline {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .caption {
+    font-size: 10px;
+    line-height: normal;
+  }
+  .tabs {
+    font-size: 10px;
+    line-height: normal;
+  }
+
+  /*---components m---*/
+  .common-button {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .m-caption-button {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .s-caption-button {
+    font-size: 12px;
+    line-height: normal;
+  }
+  .xs-caption-button {
+    font-size: 10px;
+    line-height: 18px;
+  }
+  .errorMessage {
+    font-size: 10px;
+    line-height: 18px;
+  }
+  .quote {
+    font-size: 26px;
+    line-height: 34px;
+    font-weight: 400;
+  }
+  .quote-body {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+  /*---paragraphs m---*/
+  .body-lead-xl {
+    p {
+      margin-bottom: var(--spc-xs);
+    }
+  }
+  .body-lead {
+    p {
+      margin-bottom: var(--spc-xxs);
+    }
+  }
+  .body-default {
+    p {
+      margin-bottom: var(--spc-xxs);
+    }
+  }
+  .body-default-bold {
+    p {
+      margin-bottom: var(--spc-xxs);
+    }
+  }
+  .body-inline {
+    p {
+      margin-bottom: var(--spc-xxxs);
+    }
+  }
+}
+@media (min-width: $large-viewport) {
+  /*---display l---*/
+  .display-01 {
+    font-size: 72px;
+    line-height: 84px;
+  }
+
+  /*---heading l---*/
+  .heading-xxl {
+    font-size: 48px;
+    line-height: 62px;
+  }
+  .heading-xl {
+    font-size: 40px;
+    line-height: 52px;
+    font-weight: 300;
+  }
+  .heading-l {
+    font-size: 36px;
+    line-height: 46px;
+  }
+  .heading-m {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .heading-s {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .heading-xs {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  /*---body l---*/
+  .body-lead-xl {
+    font-size: 20px;
+    line-height: 36px;
+  }
+  .body-lead {
+    font-size: 16px;
+    line-height: 32px;
+  }
+  .body-default {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .body-default-bold {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .body-inline {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .caption {
+    font-size: 10px;
+    line-height: normal;
+  }
+  .tabs {
+    font-size: 10px;
+    line-height: normal;
+  }
+
+  /*---components l---*/
+  .common-button {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .m-caption-button {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .s-caption-button {
+    font-size: 12px;
+    line-height: normal;
+  }
+  .xs-caption-button {
+    font-size: 10px;
+    line-height: 18px;
+  }
+  .errorMessage {
+    font-size: 10px;
+    line-height: 18px;
+  }
+  .quote {
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: 300;
+  }
+  .quote-body {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  /*---paragraphs l---*/
+  .body-lead-xl {
+    p {
+      margin-bottom: var(--spc-xs);
+    }
+  }
+  .body-lead {
+    p {
+      margin-bottom: var(--spc-xs);
+    }
+  }
+  .body-default {
+    p {
+      margin-bottom: var(--spc-xxs);
+    }
+  }
+  .body-default-bold {
+    p {
+      margin-bottom: var(--spc-xxs);
+    }
+  }
+  .body-inline {
+    p {
+      margin-bottom: var(--spc-xxxs);
+    }
+  }
+}
+@media (min-width: $xlarge-viewport) {
+  /*---display xl---*/
+  .display-01 {
+    font-size: 80px;
+    line-height: 98px;
+    font-weight: 300px;
+  }
+
+  /*---heading xl---*/
+  .heading-xxl {
+    font-size: 54px;
+    line-height: 60px;
+  }
+  .heading-xl {
+    font-size: 48px;
+    line-height: 60px;
+  }
+  .heading-l {
+    font-size: 40px;
+    line-height: 54px;
+  }
+  .heading-m {
+    font-size: 30px;
+    line-height: 42px;
+  }
+  .heading-s {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .heading-xs {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  /*---body xl---*/
+  .body-lead-xl {
+    font-size: 20px;
+    line-height: 36px;
+  }
+  .body-lead {
+    font-size: 18px;
+    line-height: 34px;
+  }
+  .body-default {
+    font-size: 15px;
+    line-height: 26px;
+  }
+  .body-default-bold {
+    font-size: 15px;
+    line-height: 26px;
+  }
+  .body-inline {
+    font-size: 13px;
+    line-height: 19px;
+  }
+  .caption {
+    font-size: 11px;
+    line-height: normal;
+  }
+  .tabs {
+    font-size: 11px;
+    line-height: normal;
+  }
+
+  /*---components xl---*/
+  .common-button {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .m-caption-button {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .s-caption-button {
+    font-size: 12px;
+    line-height: normal;
+  }
+  .xs-caption-button {
+    font-size: 10px;
+    line-height: 18px;
+  }
+  .errorMessage {
+    font-size: 10px;
+    line-height: 18px;
+  }
+  .quote {
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: 300;
+  }
+  .quote-body {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  /*---paragraphs xl---*/
+  .body-lead-xl {
+    p {
+      margin-bottom: var(--spc-xs);
+    }
+  }
+  .body-lead {
+    p {
+      margin-bottom: var(--spc-xs);
+    }
+  }
+  .body-default {
+    p {
+      margin-bottom: var(--spc-xs);
+    }
+  }
+  .body-default-bold {
+    p {
+      margin-bottom: var(--spc-xs);
+    }
+  }
+  .body-inline {
+    p {
+      margin-bottom: var(--spc-xxxs);
+    }
+  }
+}
+.label {
+  font-size: 8px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
