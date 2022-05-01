@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  height: 48px;
+  align-items: center;
+  margin-bottom: var(--spc-xxs);
+}
+.inputWrapper {
+  margin-right: var(--spc-xxs);
+  display: flex;
+  align-items: center;
+}
+.input {
+  display: block;
+  opacity: 0;
+  cursor: pointer;
+}
+.label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radii-circle);
+  background-color: var(--ui01);
+  position: relative;
+  margin-right: var(--spc-xxxs);
+  cursor: pointer;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: var(--color);
+    border-radius: var(--radii-circle);
+    transition: 0.3s ease;
+  }
+}

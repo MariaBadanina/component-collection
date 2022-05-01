@@ -1,0 +1,14 @@
+@import "../../../../.storybook/globalStyles/media-queries.scss";
+
+.contryRegionSelect {
+  width: 140px;
+  @media (min-width: $small-viewport) {
+    width: 315px;
+  }
+  @media (min-width: $medium-viewport) {
+    width: 412px;
+  }
+  @media (min-width: $large-viewport) {
+    width: 232px;
+  }
+}

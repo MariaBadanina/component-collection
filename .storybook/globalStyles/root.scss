@@ -10,41 +10,35 @@
   --ui02: #f8f8f8;
   --ui03: #ebedf0;
   --ui04: #f9eed6;
-  --ui05: #f7ab1b;
-  --ui06: #001c47;
+  --ui05: #75b990;
+  --ui06: #19486a;
 
   // Text Colors
-  --textRegular: #001c47;
-  --textAccent: #f7ab1b;
-  --textUltraAccent: #e0960b;
+  --textRegular: #19486a;
+  --textAccent: #75b990;
   --textLight: #ccd1da;
   --textInverse: #ffffff;
 
-  --link01: #e0960b;
-  --linkHover01: #e0960b;
-  --linkActive01: #e0960b;
-  --linkVisited01: #e0960b;
-
   // Button Text
-  --textPrimaryButton01: #001c47;
+  --textPrimaryButton01: #19486a;
   --textPrimaryHover01: #fff;
   --textPrimaryDisabled01: #fff;
 
-  --textPrimaryButton02: #001c47;
-  --textPrimaryHover02: #001c47;
+  --textPrimaryButton02: #19486a;
+  --textPrimaryHover02: #19486a;
   --textPrimaryDisabled02: #ccd1da;
 
-  --textSecondaryButton: #001c47;
-  --textSecondaryHover: #001c47;
+  --textSecondaryButton: #19486a;
+  --textSecondaryHover: #19486a;
   --textSecondaryDisabled: #ccd1da;
 
-  --textLinkButton: #001c47;
-  --textLinkHover: #001c47;
+  --textLinkButton: #19486a;
+  --textLinkHover: #19486a;
   --textLinkDisabled: #ccd1da;
 
   // Button Background
-  --bgPrimaryButton01: #f7ab1b;
-  --bgPrimaryButtonHover01: #001c47;
+  --bgPrimaryButton01: #afd9c0;
+  --bgPrimaryButtonHover01: #19486a;
   --bgPrimaryButtonDisabled01: #ccd1da;
 
   --bgPrimaryButton02: #ccd1da;
@@ -56,16 +50,16 @@
   --bgSecondaryButtonDisabled: #ebedf0;
 
   // Button Border
-  --borderSecondaryButton: #001c47;
-  --borderSecondaryHover: #001c47;
+  --borderSecondaryButton: #19486a;
+  --borderSecondaryHover: #19486a;
   --borderSecondaryDisabled: #ccd1da;
 
-  --borderLinkButton: #001c47;
-  --borderLinkHover: #001c47;
+  --borderLinkButton: #19486a;
+  --borderLinkHover: #19486a;
   --borderLinkDisabled: #ccd1da;
 
   // error
-  --errorMessage: #ff3a21;
+  --errorMessage: #ff8474;
 
   // Area Background Colors
   --area-bg01: #afd9c0;
@@ -78,7 +72,7 @@
   --gradient-bg: linear-gradient(
     180deg,
     rgba(0, 28, 71, 0.3) 0%,
-    #001c47 81.77%
+    #19486a 81.77%
   );
 
   // Veil Colors
@@ -113,13 +107,4 @@
   --outSpc-20: 20px;
   --outSpc-80: 80px;
   --outSpc-144: 144px;
-
-  // Borders
-  --border-style01: solid;
-
-  // Widths and Containers
-  --width-line01: 1px;
-  --small-container: 600px;
-  --medium-container: 900px;
-  --big-container: 1100px;
 }

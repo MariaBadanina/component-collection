@@ -1,0 +1,46 @@
+@import "../../../.storybook/globalStyles/media-queries.scss";
+
+.container {
+  margin-bottom: var(--spc-xs);
+  @media (min-width: $small-viewport) {
+    margin-bottom: var(--spc-s);
+  }
+  * {
+    transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+  }
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--ui01);
+  border-bottom: 1px solid #c8cacc;
+  border-radius: 4px;
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+  }
+}
+.input {
+  padding: 18px var(--spc-xxs) var(--spc-xxxs);
+  outline: transparent;
+  border: none;
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
+  border-radius: 4px;
+  color: var(--textRegular);
+}
+.label {
+  position: absolute;
+  left: 1px;
+  color: var(--textLight);
+  background-color: var(--ui01);
+  width: calc(100% - 2px);
+  padding-left: var(--spc-xxs);
+  border-radius: 4px 4px 0 0;
+}
+textarea {
+  resize: none;
+}
