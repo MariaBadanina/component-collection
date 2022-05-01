@@ -1,8 +1,10 @@
+import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useWindowResize } from "../../hooks/useWindowResize";
 import Button from "../../components/Button";
+import ConfirmationMessage from "../../components/ConfirmationMessage";
 import MaxWidth from "../../components/MaxWidth";
+import { useWindowResize } from "../../hooks/useWindowResize";
 import FirstStep from "./FirstStep/index.js";
 import SecondStep from "./SecondStep/index.js";
 import styles from "./styles.module.scss";
@@ -17,9 +19,11 @@ export default (props) => {
     formState: { errors },
     watch,
     trigger,
+    reset,
   } = useForm({
     mode: "onChange",
   });
+  const [sent, setSent] = useState(false);
 
   const [firstStep, setFirstStep] = useState(true);
   const [firstStepHeight, setFirstStepHeight] = useState(null);
@@ -67,7 +71,8 @@ export default (props) => {
   }, [windowWidth, firstStep, watch(), errors, countryValue]);
 
   const onSubmit = (data) => {
-    console.log("data--->", data);
+    setSent(true);
+    alert(JSON.stringify(data));
   };
 
   return (
@@ -109,79 +114,92 @@ export default (props) => {
             <div className={`${styles.detail} body-default`}>{detail}</div>
           )}
         </div>
-        <form
-          className={styles.innerContent}
-          onSubmit={handleSubmit(onSubmit)}
-          style={{
-            height: `${formHeight}px`,
-            overflow: "hidden",
-          }}
-        >
-          <div
-            style={{
-              position: "absolute",
-              left: firstStep ? "0" : "-100%",
-              transition: "0.3s ease",
-              opacity: firstStep ? 1 : 0,
-            }}
-            ref={firstStepRef}
-          >
-            <FirstStep
-              register={register}
-              error={errors}
-              subtitle={subtitle}
-              detail={detail}
-              setValue={setValue}
-              countryValue={countryValue}
-              setCountryValue={setCountryValue}
-              provinceSelect={provinceSelect}
-            />
-            <div
-              className={styles.button}
-              style={{ zIndex: firstStep ? 1 : -1 }}
+        {sent ? (
+          <AnimatePresence>
+            <motion.div
+              initial={{ y: -30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -30, opacity: 0 }}
+              transition={{ duration: 0.4 }}
             >
-              {stepOneButton && disabledOne ? (
-                <Button
-                  appearance="secondary"
-                  onClick={async () => {
-                    await trigger(firstStepList);
-                  }}
-                >
-                  {stepOneButton}
-                </Button>
-              ) : (
-                <Button
-                  appearance="secondary"
-                  onClick={() => setFirstStep(false)}
-                >
-                  {stepOneButton}
-                </Button>
-              )}
+              <ConfirmationMessage reset={reset} setSent={setSent} />
+            </motion.div>
+          </AnimatePresence>
+        ) : (
+          <form
+            className={styles.innerContent}
+            onSubmit={handleSubmit(onSubmit)}
+            style={{
+              height: `${formHeight}px`,
+              overflow: "hidden",
+            }}
+          >
+            <div
+              style={{
+                position: "absolute",
+                left: firstStep ? "0" : "-100%",
+                transition: "0.3s ease",
+                opacity: firstStep ? 1 : 0,
+              }}
+              ref={firstStepRef}
+            >
+              <FirstStep
+                register={register}
+                error={errors}
+                subtitle={subtitle}
+                detail={detail}
+                setValue={setValue}
+                countryValue={countryValue}
+                setCountryValue={setCountryValue}
+                provinceSelect={provinceSelect}
+              />
+              <div
+                className={styles.button}
+                style={{ zIndex: firstStep ? 1 : -1 }}
+              >
+                {stepOneButton && disabledOne ? (
+                  <Button
+                    appearance="secondary"
+                    onClick={async () => {
+                      await trigger(firstStepList);
+                    }}
+                  >
+                    {stepOneButton}
+                  </Button>
+                ) : (
+                  <Button
+                    appearance="secondary"
+                    onClick={() => setFirstStep(false)}
+                  >
+                    {stepOneButton}
+                  </Button>
+                )}
+              </div>
             </div>
-          </div>
 
-          <div
-            style={{
-              position: "absolute",
-              left: firstStep ? "100%" : "0",
-              transition: "0.3s ease",
-              opacity: firstStep ? 0 : 1,
-            }}
-            ref={secondStepRef}
-          >
-            <SecondStep register={register} error={errors} />
             <div
-              className={styles.button}
-              style={{ zIndex: firstStep ? -1 : 1 }}
+              style={{
+                position: "absolute",
+                left: firstStep ? "100%" : "0",
+                transition: "0.3s ease",
+                opacity: firstStep ? 0 : 1,
+              }}
+              ref={secondStepRef}
             >
-              {stepTwoButton && (
-                <Button appearance="secondary" type="submit" button={true}>
-                  {stepTwoButton}
-                </Button>
-              )}
+              <SecondStep register={register} error={errors} />
+              <div
+                className={styles.button}
+                style={{ zIndex: firstStep ? -1 : 1 }}
+              >
+                {stepTwoButton && (
+                  <Button appearance="secondary" type="submit" button={true}>
+                    {stepTwoButton}
+                  </Button>
+                )}
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        )}
       </MaxWidth>
     </div>
   );

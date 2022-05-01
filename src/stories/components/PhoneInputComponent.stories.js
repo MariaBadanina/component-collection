@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { AnimatePresence, motion } from "framer-motion";
 import Button from "../../components/Button/";
 import PhoneInputComponent from "../../components/PhoneInputComponent";
+import ConfirmationMessage from "../../components/ConfirmationMessage";
 
 export const Base = () => {
   const {
@@ -15,8 +16,8 @@ export const Base = () => {
   });
   const [sent, setSent] = useState(false);
   const onSubmit = (data) => {
-    alert(JSON.stringify(data));
     setSent(true);
+    alert(JSON.stringify(data));
   };
 
   return (
@@ -41,35 +42,7 @@ export const Base = () => {
               exit={{ y: -30, opacity: 0 }}
               transition={{ duration: 0.4 }}
             >
-              <div>
-                <div
-                  className="heading-s"
-                  style={{
-                    marginBottom: "var(--spc-xs)",
-                    color: "var(--textAccent)",
-                  }}
-                >
-                  Thank you!
-                </div>
-                <div
-                  className="body-default"
-                  style={{
-                    marginBottom: "var(--spc-m)",
-                    color: "var(--textRegular)",
-                  }}
-                >
-                  We have received your information and will get back to you
-                  soon!
-                </div>
-                <Button
-                  appearance="secondary"
-                  buttonText="Reset form"
-                  onClick={() => {
-                    reset();
-                    setSent(false);
-                  }}
-                />
-              </div>
+              <ConfirmationMessage reset={reset} setSent={setSent} />
             </motion.div>
           </AnimatePresence>
         ) : (

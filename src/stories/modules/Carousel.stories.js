@@ -5,8 +5,8 @@ const elements = Array(5)
   .fill(0)
   .map((x, idx) => ({
     content: {
-      title: `Name ${idx + 1}`,
-      position: `Position ${idx + 1}`,
+      title: `Title ${idx + 1}`,
+      position: `Subtitle ${idx + 1}`,
       quote:
         '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ut nibh eget porttitor."',
     },

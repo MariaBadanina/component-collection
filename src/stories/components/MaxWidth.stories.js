@@ -3,23 +3,34 @@ import MaxWidth from "../../components/MaxWidth";
 
 export const Base = () => {
   return (
-    <MaxWidth>
-      <div
-        style={{
-          background: "var(--textRegular)",
-          minHeight: "100px",
-          color: "var(--textInverse)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          textAlign: "center",
-          padding: "var(--spc-s)",
-        }}
-        className="heading-l"
-      >
-        Responsive container for each breakpoint
-      </div>
-    </MaxWidth>
+    <div
+      style={{
+        background: "var(--textAccent)",
+        height: "50vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        textAlign: "center",
+      }}
+    >
+      <MaxWidth>
+        <div
+          style={{
+            background: "var(--textRegular)",
+            minHeight: "100px",
+            color: "var(--textInverse)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+            padding: "var(--spc-s)",
+          }}
+          className="heading-l"
+        >
+          Responsive container for each breakpoint
+        </div>
+      </MaxWidth>
+    </div>
   );
 };
 
