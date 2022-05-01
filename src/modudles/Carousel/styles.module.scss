@@ -1,0 +1,106 @@
+@import "../../../.storybook/globalStyles/media-queries.scss";
+
+.outerContainer {
+  padding: var(--spc-4xl) 0;
+  background: var(--ui06);
+  position: relative;
+}
+.innerContainter {
+  position: relative;
+  margin: 0 auto;
+  width: var(--viewportWidth);
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: var(--spc-l);
+}
+.controlElement {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  border: 1px solid var(--ui05);
+  cursor: pointer;
+  margin: 0 var(--spc-xs);
+  transition: 0.5s ease;
+}
+.controlButton {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transition: 0.3s ease;
+  &:hover {
+    opacity: 0.5;
+  }
+  cursor: pointer;
+  * {
+    stroke: #fff !important;
+  }
+  @media (min-width: $small-viewport) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.buttonLeft {
+  right: calc(100% + 25px);
+  transform: translate(0, -50%);
+  @media (min-width: $medium-viewport) {
+    right: calc(100% + 35px);
+  }
+  @media (min-width: $large-viewport) {
+    right: calc(100% + 56px);
+  }
+}
+.buttonRight {
+  left: calc(100% + 25px);
+  transform: translate(0, -50%) rotate(-180deg);
+  @media (min-width: $medium-viewport) {
+    left: calc(100% + 35px);
+  }
+  @media (min-width: $large-viewport) {
+    left: calc(100% + 56px);
+  }
+}
+.viewport {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: var(--viewportWidth);
+  margin: 0 auto;
+}
+.line {
+  position: absolute;
+  width: 100%;
+  top: 20%;
+}
+.testimonialsMob {
+  @media (min-width: $small-viewport) {
+    display: none;
+  }
+}
+.testimonialsTabPrt {
+  display: none;
+  @media (min-width: $small-viewport) {
+    display: block;
+  }
+  @media (min-width: $medium-viewport) {
+    display: none;
+  }
+}
+.testimonialsTabLds {
+  display: none;
+  @media (min-width: $medium-viewport) {
+    display: block;
+  }
+  @media (min-width: $large-viewport) {
+    display: none;
+  }
+}
+.testimonialsBig {
+  display: none;
+  @media (min-width: $large-viewport) {
+    display: block;
+  }
+}

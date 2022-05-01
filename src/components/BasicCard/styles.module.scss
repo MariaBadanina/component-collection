@@ -1,0 +1,41 @@
+@import "../../../.storybook/globalStyles/media-queries.scss";
+
+.container {
+  padding: var(--spc-s) var(--spc-xxs);
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--ui01);
+  color: var(--textRegular);
+  border-radius: var(--radii-xs);
+  overflow: hidden;
+  @media (min-width: $small-viewport) {
+    display: flex;
+    flex-direction: row;
+    padding: var(--spc-l);
+    align-items: flex-start;
+  }
+}
+.content {
+  text-align: center;
+  @media (min-width: $small-viewport) {
+    margin-right: var(--spc-l);
+    width: 265px;
+  }
+  @media (min-width: $medium-viewport) {
+    margin-right: var(--spc-l);
+    width: 460px;
+  }
+  @media (min-width: $large-viewport) {
+    margin-right: var(--spc-l);
+    width: 400px;
+  }
+}
+.quote {
+  margin-bottom: var(--spc-l);
+}
+.title {
+  margin-bottom: var(--spc-xxxs);
+}
