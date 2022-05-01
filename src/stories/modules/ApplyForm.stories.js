@@ -6,8 +6,8 @@ const defaultProps = {
   subtitle: "Subtitle",
   detail:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor nisi, rutrum amet tortor sed elementum. Commodo, proin tincidunt facilisi pellentesque morbi",
-  stepOneButton: "Ir al siguiente paso",
-  stepTwoButton: "Solicitar admisión",
+  stepOneButton: "Go to second step",
+  stepTwoButton: "Submint",
 };
 
 export const Base = () => <ApplyForm {...defaultProps} />;

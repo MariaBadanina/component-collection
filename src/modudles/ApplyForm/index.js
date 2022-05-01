@@ -106,7 +106,9 @@ export default (props) => {
       </div>
       <MaxWidth extraClass={styles.maxWidthContent}>
         <div className={styles.innerContent}>
-          {title && <div className={`${styles.title} heading-l`}> {title}</div>}
+          {title && (
+            <div className={`${styles.title} heading-xl`}> {title}</div>
+          )}
           {subtitle && (
             <div className={`${styles.subtitle} heading-m`}>{subtitle}</div>
           )}

@@ -7,10 +7,11 @@
 .heading-l,
 .heading-m,
 .heading-s,
-.heading-xs,
-.quote {
+.heading-xs {
   font-family: var(--font-secondary);
   font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -1px;
 }
 
 .body-lead-xl,
@@ -24,7 +25,8 @@
 .s-caption-button,
 .xs-caption-button,
 .errorMessage,
-.label {
+.label,
+.quote {
   font-family: var(--font-primary);
   font-weight: 400;
 }
