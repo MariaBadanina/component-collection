@@ -27,42 +27,42 @@
 
   // Button Text
   --textPrimaryButton01: #001c47;
-  --textPrimaryHover01: #001c47;
-  --textPrimaryDisabled01: #404670;
+  --textPrimaryHover01: #fff;
+  --textPrimaryDisabled01: #fff;
 
   --textPrimaryButton02: #001c47;
   --textPrimaryHover02: #001c47;
-  --textPrimaryDisabled02: #404670;
+  --textPrimaryDisabled02: #ccd1da;
 
-  --textSecondaryButton: #fff;
-  --textSecondaryHover: #fff;
-  --textSecondaryDisabled: #404670;
+  --textSecondaryButton: #001c47;
+  --textSecondaryHover: #001c47;
+  --textSecondaryDisabled: #ccd1da;
 
-  --textLinkButton: #fff;
-  --textLinkHover: #fff;
-  --textLinkDisabled: #565e95;
+  --textLinkButton: #001c47;
+  --textLinkHover: #001c47;
+  --textLinkDisabled: #ccd1da;
 
   // Button Background
   --bgPrimaryButton01: #f7ab1b;
-  --bgPrimaryButtonHover01: #ffffff;
-  --bgPrimaryButtonDisabled01: #001637;
+  --bgPrimaryButtonHover01: #001c47;
+  --bgPrimaryButtonDisabled01: #ccd1da;
 
   --bgPrimaryButton02: #ccd1da;
   --bgPrimaryButtonHover02: #adbbd4;
-  --bgPrimaryButtonDisabled02: #001637;
+  --bgPrimaryButtonDisabled02: #ebedf0;
 
-  --bgSecondaryButton: #001c47;
-  --bgSecondaryButtonHover: #001637;
-  --bgSecondaryButtonDisabled: #001e4b;
+  --bgSecondaryButton: #fff;
+  --bgSecondaryButtonHover: #ccd1da;
+  --bgSecondaryButtonDisabled: #ebedf0;
 
   // Button Border
-  --borderSecondaryButton: #fff;
-  --borderSecondaryHover: #fff;
-  --borderSecondaryDisabled: #404670;
+  --borderSecondaryButton: #001c47;
+  --borderSecondaryHover: #001c47;
+  --borderSecondaryDisabled: #ccd1da;
 
-  --borderLinkButton: #fff;
-  --borderLinkHover: #fff;
-  --borderLinkDisabled: #565e95;
+  --borderLinkButton: #001c47;
+  --borderLinkHover: #001c47;
+  --borderLinkDisabled: #ccd1da;
 
   // error
   --errorMessage: #ff3a21;

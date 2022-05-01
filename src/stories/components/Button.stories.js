@@ -22,9 +22,6 @@ const ButtonsContent = ({}) => {
           alignItems: "center",
         }}
       >
-        <div style={{ margin: "var(--spc-xxs)", color: "var(--textRegular)" }}>
-          Primary 01
-        </div>
         <Button
           appearance="primary01"
           buttonText="Primary 01"
@@ -44,9 +41,6 @@ const ButtonsContent = ({}) => {
           alignItems: "center",
         }}
       >
-        <div style={{ margin: "var(--spc-xxs)", color: "var(--textRegular)" }}>
-          Primary 02
-        </div>
         <Button
           appearance="primary02"
           buttonText="Primary 02"
@@ -66,9 +60,6 @@ const ButtonsContent = ({}) => {
           alignItems: "center",
         }}
       >
-        <div style={{ margin: "var(--spc-xxs)", color: "var(--textRegular)" }}>
-          Secondary
-        </div>
         <Button
           appearance="secondary"
           buttonText="Secondary"
@@ -88,9 +79,6 @@ const ButtonsContent = ({}) => {
           alignItems: "center",
         }}
       >
-        <div style={{ margin: "var(--spc-xxs)", color: "var(--textRegular)" }}>
-          Link
-        </div>
         <Button
           appearance="link"
           buttonText="Link"

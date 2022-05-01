@@ -13,7 +13,7 @@ export const Base = () => {
   } = useForm({
     mode: "onChange",
   });
-  const [sent, setSent] = useState(true);
+  const [sent, setSent] = useState(false);
   const onSubmit = (data) => {
     alert(JSON.stringify(data));
     setSent(true);
