@@ -26,12 +26,16 @@ const ButtonInnerContent = ({
           style={style}
         >
           {buttonText || children}
-          {appearance === "link" ? <div>&#8594;</div> : null}
+          {appearance === "link" ? (
+            <div className={styles.icon}>&#8594;</div>
+          ) : null}
         </a>
       ) : (
         <span onClick={onClick} style={style}>
           {buttonText || children}
-          {appearance === "link" ? <div>&#8594;</div> : null}
+          {appearance === "link" ? (
+            <div className={styles.icon}>&#8594;</div>
+          ) : null}
         </span>
       )}
     </>

@@ -115,7 +115,7 @@
 }
 
 .icon {
-  width: 7px;
+  width: 14px;
   height: auto;
   margin-left: var(--spc-xxs);
   & > * {
@@ -124,7 +124,7 @@
 }
 
 .iconDisabled {
-  width: 7px;
+  width: 14px;
   padding: 0 0 var(--spc-xxs) 0;
   margin-left: var(--spc-xxs);
   & > * {
@@ -166,6 +166,7 @@
     width: 0;
     height: 0;
     margin: 0;
+    overflow: hidden;
   }
   .container {
     width: fit-content;
@@ -177,7 +178,7 @@
     }
     &:hover {
       .icon {
-        width: 7px;
+        width: 14px;
         height: auto;
         margin-left: var(--spc-xxs);
       }

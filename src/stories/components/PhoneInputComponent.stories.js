@@ -88,7 +88,7 @@ export const Base = () => {
               }}
             >
               <Button
-                appearance="secondary"
+                appearance="primary02"
                 type="submit"
                 button={true}
                 buttonText="Submit"
