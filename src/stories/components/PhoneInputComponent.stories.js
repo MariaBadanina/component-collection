@@ -43,22 +43,23 @@ export const Base = () => {
             >
               <div>
                 <div
-                  className="heading-xs"
+                  className="heading-s"
                   style={{
                     marginBottom: "var(--spc-xs)",
                     color: "var(--textAccent)",
                   }}
                 >
-                  Gracias!
+                  Thank you!
                 </div>
                 <div
-                  className="body-lead"
+                  className="body-default"
                   style={{
                     marginBottom: "var(--spc-m)",
                     color: "var(--textRegular)",
                   }}
                 >
-                  La información se ha enviado correctamente
+                  We have received your information and will get back to you
+                  soon!
                 </div>
                 <Button
                   appearance="secondary"
