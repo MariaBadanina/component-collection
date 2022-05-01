@@ -94,7 +94,7 @@ export const Base = () => {
 };
 
 export default {
-  title: "DesignSystem/Buttons",
+  title: "Elements/Buttons",
   parameters: {
     layout: "fullscreen",
     options: {

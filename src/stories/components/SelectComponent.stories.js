@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { AnimatePresence, motion } from "framer-motion";
 import Button from "../../components/Button/";
-import PhoneInputComponent from "../../components/PhoneInputComponent";
+import SelectComponent from "../../components/SelectComponent";
 import ConfirmationMessage from "../../components/ConfirmationMessage";
+import countriesList from "../../constants/countriesList";
 
 export const Base = () => {
   const {
@@ -15,6 +16,7 @@ export const Base = () => {
     mode: "onChange",
   });
   const [sent, setSent] = useState(false);
+  const [countryValue, setCountryValue] = useState(null);
   const onSubmit = (data) => {
     setSent(true);
     alert(JSON.stringify(data));
@@ -47,12 +49,17 @@ export const Base = () => {
           </AnimatePresence>
         ) : (
           <form onSubmit={handleSubmit(onSubmit)}>
-            <PhoneInputComponent
-              labelText="Phone number *"
-              name="phone"
+            <SelectComponent
               register={register}
               error={errors}
+              name="country"
               required={true}
+              defaultOptionLabel="Country *"
+              errorMessage="Select country"
+              options={countriesList}
+              value={countryValue}
+              setValue={setCountryValue}
+              label="ISO"
             />
             <div
               style={{
@@ -76,7 +83,7 @@ export const Base = () => {
 };
 
 export default {
-  title: "Components/PhoneInputComponent",
+  title: "Components/SelectComponent",
   parameters: {
     options: {
       showPanel: false,

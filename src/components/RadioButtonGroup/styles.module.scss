@@ -3,6 +3,7 @@
   height: 48px;
   align-items: center;
   margin-bottom: var(--spc-xxs);
+  color: var(--textRegular);
 }
 .inputWrapper {
   margin-right: var(--spc-xxs);
@@ -26,7 +27,7 @@
   margin-right: var(--spc-xxxs);
   cursor: pointer;
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 8px;
     height: 8px;

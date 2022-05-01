@@ -35,7 +35,7 @@ export const Base = () => {
 };
 
 export default {
-  title: "DesignSystem/MaxWidth",
+  title: "Elements/MaxWidth",
   parameters: {
     options: {
       showPanel: false,

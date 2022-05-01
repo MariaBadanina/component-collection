@@ -20,7 +20,7 @@ export default ({ register, error }) => {
         <SelectComponent
           register={register}
           error={error}
-          name="lead_nationalityISO"
+          name="nationalityISO"
           required={true}
           defaultOptionLabel="Nationality *"
           errorMessage="This field is required"
@@ -32,7 +32,7 @@ export default ({ register, error }) => {
         />
         <InputComponent
           labelText="Passport *"
-          name="lead_documentNumber"
+          name="documentNumber"
           type="text"
           register={register}
           error={error}
@@ -81,7 +81,8 @@ export default ({ register, error }) => {
       <RadioButtonGroup
         register={register}
         error={error}
-        label="What is your level of English? *"
+        label="How would you describe your English level?
+ *"
         elements={[
           { label: "Low", value: "low" },
           { label: "Medium", value: "medium" },

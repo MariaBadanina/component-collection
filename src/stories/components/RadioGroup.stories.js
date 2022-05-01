@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { AnimatePresence, motion } from "framer-motion";
 import Button from "../../components/Button/";
-import PhoneInputComponent from "../../components/PhoneInputComponent";
+import RadioButtonGroup from "../../components/RadioButtonGroup";
 import ConfirmationMessage from "../../components/ConfirmationMessage";
 
 export const Base = () => {
@@ -26,6 +26,7 @@ export const Base = () => {
         height: "100vh",
         background: "var(--ui02)",
         padding: "var(--spc-4xl)",
+        color: "var(--textRegular)",
       }}
     >
       <div
@@ -47,12 +48,16 @@ export const Base = () => {
           </AnimatePresence>
         ) : (
           <form onSubmit={handleSubmit(onSubmit)}>
-            <PhoneInputComponent
-              labelText="Phone number *"
-              name="phone"
+            <RadioButtonGroup
               register={register}
               error={errors}
-              required={true}
+              label="How would you describe your English level?
+ *"
+              elements={[
+                { label: "Low", value: "low" },
+                { label: "Medium", value: "medium" },
+                { label: "High", value: "high" },
+              ]}
             />
             <div
               style={{
@@ -76,7 +81,7 @@ export const Base = () => {
 };
 
 export default {
-  title: "Components/PhoneInputComponent",
+  title: "Components/RadioButtonGroup",
   parameters: {
     options: {
       showPanel: false,

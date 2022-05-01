@@ -40,14 +40,14 @@ export default (props) => {
   const secondStepRef = useRef(null);
 
   const firstStepList = [
-    "lead_name",
-    "lead_email",
-    "lead_countryISO",
+    "name",
+    "email",
+    "countryISO",
     "phone",
     "prefix",
-    "lead_age",
+    "age",
     "study_level",
-    ...(provinceSelect === true ? ["lead_provinceISO"] : ["lead_province"]),
+    ...(provinceSelect === true ? ["provinceISO"] : ["province"]),
   ];
 
   useEffect(() => {
@@ -55,12 +55,12 @@ export default (props) => {
     setSecondStepHeight(secondStepRef?.current?.clientHeight);
     setFormHeight(firstStep ? firstStepHeight : secondStepHeight);
     setDisabledOne(
-      watch().lead_name &&
-        watch().lead_email &&
-        watch().lead_countryISO &&
-        (provinceSelect ? watch().lead_provinceISO : watch().lead_province) &&
+      watch().name &&
+        watch().email &&
+        watch().countryISO &&
+        (provinceSelect ? watch().provinceISO : watch().province) &&
         watch().phone &&
-        watch().lead_age &&
+        watch().age &&
         watch().study_level &&
         Object.keys(errors).filter((element) => firstStepList.includes(element))
           .length === 0

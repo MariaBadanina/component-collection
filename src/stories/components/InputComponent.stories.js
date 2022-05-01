@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { AnimatePresence, motion } from "framer-motion";
 import Button from "../../components/Button/";
-import PhoneInputComponent from "../../components/PhoneInputComponent";
+import InputComponent from "../../components/InputComponent";
 import ConfirmationMessage from "../../components/ConfirmationMessage";
 
 export const Base = () => {
@@ -47,12 +47,21 @@ export const Base = () => {
           </AnimatePresence>
         ) : (
           <form onSubmit={handleSubmit(onSubmit)}>
-            <PhoneInputComponent
-              labelText="Phone number *"
-              name="phone"
+            <InputComponent
+              labelText="Name *"
+              name="name"
+              type="text"
               register={register}
               error={errors}
-              required={true}
+              required={{
+                required: "This field is required",
+                minlength: 1,
+                maxlength: 128,
+                pattern: {
+                  value: /^([a-zA-ZÀ-ÿẞ])+(([ ]([a-zA-ZÀ-ÿẞ])+)+)?$/,
+                  message: "Introduce a valid name",
+                },
+              }}
             />
             <div
               style={{
@@ -76,7 +85,7 @@ export const Base = () => {
 };
 
 export default {
-  title: "Components/PhoneInputComponent",
+  title: "Components/InputComponent",
   parameters: {
     options: {
       showPanel: false,

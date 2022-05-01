@@ -69,7 +69,7 @@ export default (props) => {
     <div>
       <InputComponent
         labelText="Name *"
-        name="lead_name"
+        name="name"
         type="text"
         register={register}
         error={error}
@@ -79,13 +79,13 @@ export default (props) => {
           maxlength: 128,
           pattern: {
             value: /^([a-zA-ZÀ-ÿẞ])+(([ ]([a-zA-ZÀ-ÿẞ])+)+)?$/,
-            message: "Introduce un nombre válido",
+            message: "Introduce a valid name",
           },
         }}
       />
       <InputComponent
         labelText="Email *"
-        name="lead_email"
+        name="email"
         type="email"
         register={register}
         error={error}
@@ -93,7 +93,7 @@ export default (props) => {
           required: "This field is required",
           pattern: {
             value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$/,
-            message: "Introduce un email válido",
+            message: "Introduce a valid email",
           },
         }}
       />
@@ -107,7 +107,7 @@ export default (props) => {
         <SelectComponent
           register={register}
           error={error}
-          name="lead_countryISO"
+          name="countryISO"
           required={true}
           defaultOptionLabel="Country *"
           errorMessage="Select Country"
@@ -121,7 +121,7 @@ export default (props) => {
           <SelectComponent
             register={register}
             error={error}
-            name="lead_provinceISO"
+            name="provinceISO"
             required={true}
             defaultOptionLabel="Province *"
             options={regionsOptions}
@@ -133,7 +133,7 @@ export default (props) => {
         ) : (
           <InputComponent
             labelText="Province *"
-            name="lead_province"
+            name="province"
             type="text"
             register={register}
             error={error}
@@ -164,7 +164,7 @@ export default (props) => {
       >
         <InputComponent
           labelText="Age *"
-          name="lead_age"
+          name="age"
           type="text"
           register={register}
           error={error}
