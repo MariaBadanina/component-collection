@@ -1,19 +1,22 @@
 import * as React from "react";
 import Button from "../../components/Button/index";
+import { useWindowResize } from "../../hooks/useWindowResize";
 
-const buttonContainer = {
-  background: "var(--ui01)",
-  padding: "var(--spc-m) var(--spc-xxl)",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  textAlign: "center",
-  justifyContent: "center",
-};
+export const Base = () => {
+  const windowWidth = useWindowResize();
 
-const ButtonsContent = ({}) => {
   return (
-    <>
+    <div
+      style={{
+        background: "var(--ui02)",
+        padding: "var(--spc-m) var(--spc-xxl)",
+        display: "flex",
+        flexDirection: windowWidth < 1024 ? "column" : "row",
+        alignItems: "center",
+        textAlign: "center",
+        justifyContent: "center",
+      }}
+    >
       <div
         style={{
           margin: "var(--spc-xs)",
@@ -86,15 +89,9 @@ const ButtonsContent = ({}) => {
         />
         <Button appearance="link" buttonText="Link disabled" disabled />
       </div>
-    </>
+    </div>
   );
 };
-
-export const Base = () => (
-  <div className={buttonContainer}>
-    <ButtonsContent />
-  </div>
-);
 
 export default {
   title: "DesignSystem/Buttons",
