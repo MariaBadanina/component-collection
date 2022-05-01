@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { AnimatePresence, motion } from "framer-motion";
-import Button from "../../components/Button/index";
+import Button from "../../components/Button/";
 import PhoneInputComponent from "../../components/PhoneInputComponent";
 
 export const Base = () => {
