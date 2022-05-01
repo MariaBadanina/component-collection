@@ -13,7 +13,7 @@ const defaultProps = {
 export const Base = () => <ApplyForm {...defaultProps} />;
 
 export default {
-  title: "Modules/TwoScreenForm",
+  title: "Modules/TwoStepForm",
   parameters: {
     layout: "fullscreen",
     options: {
