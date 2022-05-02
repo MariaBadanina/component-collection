@@ -1,5 +1,6 @@
 {
   "name": "components-collection",
+  "homepage": "https://mariabadanina.github.io/component-collection/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,6 +21,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
+    "predeploy": "npm run build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static",
     "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
@@ -60,6 +63,7 @@
     "@storybook/react": "^6.4.22",
     "@storybook/testing-library": "^0.0.11",
     "css-loader": "5.2.7",
+    "gh-pages": "^3.2.3",
     "sass": "^1.51.0",
     "sass-loader": "10.1.1",
     "style-loader": "2.0.0",
