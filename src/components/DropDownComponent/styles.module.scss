@@ -1,5 +1,6 @@
 .container {
   width: 100%;
+  position: relative;
 }
 .valueContainer {
   background: var(--ui03);
@@ -14,6 +15,8 @@
 .dropDownList {
   background: var(--ui02);
   overflow: hidden;
+  position: absolute;
+  width: 100%;
 }
 .listItem {
   cursor: pointer;
@@ -25,6 +28,6 @@
   padding: var(--spc-xs);
   &:hover {
     color: var(--ui03);
-    background-color: var(--bgPrimaryButton01);
+    background-color: var(--bgPrimaryButtonHover01);
   }
 }

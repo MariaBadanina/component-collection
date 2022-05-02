@@ -1,0 +1,28 @@
+@import "../../../.storybook/globalStyles/media-queries.scss";
+
+.motionDiv {
+  background-color: var(--bg03);
+  height: 0;
+  overflow: hidden;
+  color: var(--textInverse);
+}
+.maxWidth {
+  height: 100%;
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.dropDownContainer {
+  min-height: 50px;
+  width: 100%;
+  background-color: var(--ui02);
+  @media (min-width: $small-viewport) {
+    flex-direction: row;
+  }
+}

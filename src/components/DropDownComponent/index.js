@@ -3,14 +3,16 @@ import styles from "./styles.module.scss";
 import arrow from "../../accets/arrow_down.svg";
 import { AnimatePresence, motion } from "framer-motion";
 
-export default ({ options }) => {
+export default ({ options, visibleSection, itemEls, scrollTo }) => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(options?.[0]);
 
   return (
     <div className={styles.container}>
       <div onClick={() => setOpen(!open)} className={styles.valueContainer}>
-        <div className={styles.defaultValue}>{value}</div>
+        <div className={styles.defaultValue}>
+          {options?.[visibleSection] || value}
+        </div>
         <img
           src={arrow}
           alt="arrow"
@@ -41,6 +43,7 @@ export default ({ options }) => {
                     onClick={() => {
                       setValue(option);
                       setOpen(false);
+                      scrollTo && scrollTo(itemEls?.current?.[idx]);
                     }}
                   >
                     {option}
